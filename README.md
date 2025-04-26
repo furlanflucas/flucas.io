@@ -66,6 +66,4 @@ Each project includes:
 - Where AWS services involve costs, projects are designed to **fit within Free Tier limits** or **simulate scaled setups** responsibly.
 - This repository is continuously updated with new projects to showcase ongoing growth and learning.
 
----
 
-# 🚀 Let's Build Scalable, Real-World Systems!
