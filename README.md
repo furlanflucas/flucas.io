@@ -39,7 +39,6 @@ My goal is to deliver flexible cloud-native architectures that reflect the depth
 | Project | Description |
 |:--------|:------------|
 | **Airbnb Cloud Platform** *(in progress)* | Scalable reservation platform inspired by Airbnb's AWS migration case study, focusing on system architecture, data pipelines, and analytics. |
-| *(Future Projects Coming Soon)* | New end-to-end systems across IoT, real-time fraud detection, and serverless architectures. |
 
 Each project includes:
 - System Architecture Design
@@ -63,7 +62,6 @@ Each project includes:
 ## 📢 Notes
 
 - All projects are **educational** and designed to simulate real-world architectures.
-- Where AWS services involve costs, projects are designed to **fit within Free Tier limits** or **simulate scaled setups** responsibly.
 - This repository is continuously updated with new projects to showcase ongoing growth and learning.
 
 
