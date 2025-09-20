@@ -32,7 +32,7 @@ export function HeroSection() {
               Welcome!
             </h1>
             <h2 className="text-2xl md:text-3xl text-primary font-low font-[var(--font-orbitron)]">
-              I'm Lucas, a Cloud Engineer Professional
+              I'm Lucas, a Cloud Engineer.
             </h2>
           </div>
 
