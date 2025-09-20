@@ -29,10 +29,10 @@ export function HeroSection() {
         <div className="space-y-8 text-left">
           <div className="space-y-6">
             <h1 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight font-[var(--font-orbitron)]">
-              Hi, Welcome!
+              Welcome!
             </h1>
-            <h2 className="text-2xl md:text-3xl text-primary font-medium font-[var(--font-orbitron)]">
-              Cloud Engineer
+            <h2 className="text-2xl md:text-3xl text-primary font-low font-[var(--font-orbitron)]">
+              I'm Lucas, a Cloud Engineer Professional
             </h2>
           </div>
 
