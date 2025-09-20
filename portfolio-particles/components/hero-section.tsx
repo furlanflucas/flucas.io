@@ -37,8 +37,8 @@ export function HeroSection() {
           </div>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-            I architect and optimize scalable, cloud-native solutions. Passionate about building resilient
-            infrastructure that empowers innovation at scale.
+            I Design and optimize scalable, cloud-native solutions. Passionate about building resilient
+            infrastructure that drives innovation at scale.
           </p>
 
           {/* Social Links */}
