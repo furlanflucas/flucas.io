@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { Cloud } from "lucide-react"
 
 export function Navigation() {
   const [activeSection, setActiveSection] = useState("about")
@@ -45,7 +46,19 @@ export function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-xl font-bold text-foreground">Portfolio</div>
+          {/* Logo */}
+          <div
+            onClick={() => scrollToSection("about")}
+            className="flex items-center gap-2 text-xl md:text-2xl font-[var(--font-orbitron)] cursor-pointer select-none"
+          >
+            <Cloud className="h-6 w-6 text-primary" />
+            <span>
+              <span className="text-foreground">flucas</span>
+              <span className="text-primary">.io</span>
+            </span>
+          </div>
+
+          {/* Navigation Items */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <button

@@ -18,7 +18,7 @@ export function ParticleBackground() {
   const mouseRef = useRef({ x: 0, y: 0 })
   const animationRef = useRef<number>()
 
-  const colors = ["#338aca", "#26b7cd", "#61bdaf", "#2b2c68"]
+  const colors = ["#ffffffff"]
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -34,7 +34,7 @@ export function ParticleBackground() {
 
     const createParticles = () => {
       const particles: Particle[] = []
-      const particleCount = Math.min(100, Math.floor((canvas.width * canvas.height) / 15000))
+      const particleCount = Math.min(200, Math.floor((canvas.width * canvas.height) / 15000))
 
       for (let i = 0; i < particleCount; i++) {
         particles.push({
@@ -42,7 +42,7 @@ export function ParticleBackground() {
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 0.5,
           vy: (Math.random() - 0.5) * 0.5,
-          size: Math.random() * 3 + 1,
+          size: Math.random() * 4 + 1,
           color: colors[Math.floor(Math.random() * colors.length)],
           opacity: Math.random() * 0.5 + 0.2,
         })
@@ -73,8 +73,8 @@ export function ParticleBackground() {
 
       if (distance < 150) {
         const force = (150 - distance) / 150
-        particle.vx += (dx / distance) * force * 0.01
-        particle.vy += (dy / distance) * force * 0.01
+        particle.vx += (dx / distance) * force * 0.05
+        particle.vy += (dy / distance) * force * 0.05
         particle.opacity = Math.min(0.8, particle.opacity + force * 0.02)
       } else {
         particle.opacity = Math.max(0.2, particle.opacity - 0.01)
@@ -107,7 +107,7 @@ export function ParticleBackground() {
           if (distance < 100) {
             ctx.save()
             ctx.globalAlpha = ((100 - distance) / 100) * 0.2
-            ctx.strokeStyle = "#338aca"
+            ctx.strokeStyle = "#b6b8baff"
             ctx.lineWidth = 1
             ctx.beginPath()
             ctx.moveTo(particles[i].x, particles[i].y)

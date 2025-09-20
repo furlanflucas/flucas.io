@@ -5,23 +5,23 @@
 
 :root {
   /* Updated color palette to match user's specifications */
-  --background: #191834; /* very dark navy */
+  --background: #000000; /* very dark navy */
   --foreground: #ffffff;
-  --card: #2b2c68; /* deep indigo */
+  --card: #161616; /* deep indigo */
   --card-foreground: #ffffff;
-  --popover: #2b2c68;
-  --popover-foreground: #ffffff;
-  --primary: #338aca; /* medium blue */
-  --primary-foreground: #ffffff;
-  --secondary: #26b7cd; /* cyan/teal-blue */
+  --popover: #dbdbdc;
+  --popover-foreground: #363535;
+  --primary: #f8f8f8; /* medium blue */
+  --primary-foreground: #000000;
+  --secondary: #7d7e7e; /* cyan/teal-blue */
   --secondary-foreground: #191834;
-  --muted: #2b2c68;
+  --muted: #838383;
   --muted-foreground: #a0a0a0;
-  --accent: #61bdaf; /* seafoam green */
+  --accent: #ffffff; /* seafoam green */
   --accent-foreground: #191834;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: #2b2c68;
+  --border: #8a8a8a;
   --input: #2b2c68;
   --ring: #338aca;
   --chart-1: #338aca;
@@ -30,7 +30,7 @@
   --chart-4: #2b2c68;
   --chart-5: #191834;
   --radius: 0.625rem;
-  --sidebar: #191834;
+  --sidebar: #757578;
   --sidebar-foreground: #ffffff;
   --sidebar-primary: #338aca;
   --sidebar-primary-foreground: #ffffff;

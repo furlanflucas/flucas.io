@@ -1,67 +1,62 @@
-import { Card } from "@/components/ui/card"
+"use client"
 
 export function ExperienceSection() {
-  const experiences = [
-    {
-      period: "2024 — PRESENT",
-      title: "Senior Frontend Engineer, Accessibility",
-      company: "TechCorp",
-      description:
-        "Build and maintain critical components used to construct the frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.",
-      technologies: ["JavaScript", "TypeScript", "React", "Next.js"],
-    },
-    {
-      period: "2022 — 2024",
-      title: "Frontend Developer",
-      company: "StartupXYZ",
-      description:
-        "Developed responsive web applications and user interfaces. Collaborated with design teams to implement pixel-perfect designs and ensure optimal user experience across all devices.",
-      technologies: ["React", "Vue.js", "Tailwind CSS", "Node.js"],
-    },
-    {
-      period: "2020 — 2022",
-      title: "Junior Web Developer",
-      company: "WebAgency",
-      description:
-        "Created and maintained websites for various clients. Gained experience in full-stack development and learned modern web development practices.",
-      technologies: ["HTML", "CSS", "JavaScript", "PHP"],
-    },
+  const skills = ["AWS", "Azure", "CompTIA"]
+
+  const companies = [
+    { name: "Airbnb", logo: "/airbnb-2-logo-svgrepo-com.svg" },
+    { name: "Meta", logo: "/facebook-logo-meta-2-svgrepo-com.svg" },
+    { name: "Vercel", logo: "/vercel-svgrepo-com.svg" },
   ]
 
   return (
     <section id="experience" className="py-24 relative z-10">
-      <div className="max-w-4xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16 text-balance">Experience</h2>
+      <div className="max-w-5xl mx-auto px-6 text-center space-y-16">
+        
+        {/* Title */}
+        <h2 className="text-4xl md:text-5xl font-semi-bold text-foreground">
+          Experience
+        </h2>
 
-        <div className="space-y-8">
-          {experiences.map((exp, index) => (
-            <Card
-              key={index}
-              className="p-8 bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300"
-            >
-              <div className="grid md:grid-cols-4 gap-6">
-                <div className="md:col-span-1">
-                  <p className="text-sm text-muted-foreground font-medium">{exp.period}</p>
-                </div>
-                <div className="md:col-span-3 space-y-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground">{exp.title}</h3>
-                    <p className="text-primary font-medium">{exp.company}</p>
-                  </div>
-                  <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech) => (
-                      <span key={tech} className="px-3 py-1 text-xs font-medium bg-accent/20 text-accent rounded-full">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </Card>
-          ))}
+        {/* Skills */}
+        <div>
+          <h3 className="text-xl font-semibold text-foreground mb-6">Technologies</h3>
+          <div className="flex flex-wrap justify-center gap-25">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="px-5 py-2 text-sm font-medium bg-accent/20 text-accent rounded-full"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
         </div>
+
+        {/* Companies */}
+        <div>
+          <h3 className="text-xl font-thin text-foreground mb-6">Previous Companies</h3>
+          <div className="flex flex-wrap justify-center items-center gap-25">
+            {companies.map((company) => (
+              <div
+                key={company.name}
+                className="p-4 bg-card/50 backdrop-blur-sm rounded-xl border border-border/50"
+              >
+                <img
+                  src={company.logo}
+                  alt={company.name}
+                  className={`h-12 md:h-16 object-contain ${
+                    company.name === "Vercel" ? "md:h-20" : ""
+                  }`}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   )
 }
+
+
