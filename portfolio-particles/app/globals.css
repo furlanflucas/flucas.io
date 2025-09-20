@@ -18,7 +18,7 @@
   --muted: #838383;
   --muted-foreground: #a0a0a0;
   --accent: #ffffff; /* seafoam green */
-  --accent-foreground: #191834;
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: #8a8a8a;

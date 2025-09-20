@@ -1,42 +1,46 @@
+"use client"
+
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Github } from "lucide-react"
+import { Github } from "lucide-react"
 
 export function ProjectsSection() {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Geospatial Data Quality Monitor",
       description:
-        "A modern e-commerce platform built with Next.js and Stripe integration. Features include product catalog, shopping cart, and secure checkout.",
-      image: "/modern-ecommerce-interface.png",
-      technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "Pipeline that fetches road network data from OpenStreetMap, detects missing speed limits, and visualizes anomalies in a Streamlit dashboard.",
+      image: "/geospatial.png", // replace with your screenshot in /public
+      technologies: ["Python", "Streamlit", "Folium", "OpenStreetMap"],
+      githubUrl:
+        "https://github.com/furlanflucas/cloud-data-engineering-portfolio/tree/main/data_engineering/geospatial_data_quality_pipeline",
     },
     {
-      title: "Task Management App",
+      title: "Real-Time Fraud Detection",
       description:
-        "Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "/task-management-dashboard.png",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "AWS-based simulation using Kafka for event streaming, Python for data processing, and Streamlit for visualization.",
+      image: "/fraud.png", // replace with your screenshot in /public
+      technologies: ["AWS", "Kafka", "Python", "Streamlit"],
+      githubUrl:
+        "https://github.com/furlanflucas/cloud-data-engineering-portfolio/tree/main/data_engineering/real_time_fraud_detections",
     },
     {
-      title: "Weather Dashboard",
+      title: "Cloud Data Warehouse for Music Analytics",
       description:
-        "Interactive weather dashboard with location-based forecasts, historical data visualization, and responsive design.",
-      image: "/preview/project4.png",
-      technologies: ["Vue.js", "Chart.js", "OpenWeather API", "CSS Grid"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "Cloud data warehouse with AWS Redshift using star schema design and ETL pipelines to process song play data from S3.",
+      image: "/cloudwarehouse.jpg", // replace with your screenshot in /public
+      technologies: ["AWS Redshift", "S3", "ETL", "SQL"],
+      githubUrl:
+        "https://github.com/furlanflucas/cloud-data-engineering-portfolio/tree/main/data_engineering/cloud_data_warehouse_for_music_analytics",
     },
   ]
 
   return (
     <section id="projects" className="py-24 relative z-10">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16 text-balance">Selected Work</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-16 text-balance">
+          Projects
+        </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
@@ -52,23 +56,29 @@ export function ProjectsSection() {
                 />
               </div>
               <div className="p-6 space-y-4">
-                <h3 className="text-xl font-semibold text-foreground">{project.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{project.description}</p>
+                <h3 className="text-xl font-semibold text-foreground">
+                  {project.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <span key={tech} className="px-2 py-1 text-xs font-medium bg-secondary/20 text-secondary rounded">
+                    <span
+                      key={tech}
+                      className="px-2 py-1 text-xs font-medium bg-secondary/20 text-secondary rounded"
+                    >
                       {tech}
                     </span>
                   ))}
                 </div>
                 <div className="flex gap-3 pt-2">
-                  <Button size="sm" variant="outline" className="flex-1 bg-transparent">
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Live Demo
-                  </Button>
-                  <Button size="sm" variant="ghost">
-                    <Github className="h-4 w-4" />
-                  </Button>
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" variant="ghost">
+                      <Github className="h-4 w-4 mr-2" />
+                      GitHub
+                    </Button>
+                  </a>
                 </div>
               </div>
             </Card>

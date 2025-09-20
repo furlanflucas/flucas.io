@@ -40,9 +40,9 @@ export function ContactSection() {
           </div>
         </Card>
 
-        <div className="mt-16 pt-8 border-t border-border/50">
+        <div className="mt-16 pt-5 border-t border-border/50">
           <p className="text-sm text-muted-foreground">
-            © 2024 — Crafted with care using Next.js and Tailwind CSS
+            © 2025 — flucas.io
           </p>
         </div>
       </div>

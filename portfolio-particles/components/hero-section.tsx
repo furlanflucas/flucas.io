@@ -12,7 +12,8 @@ export function HeroSection() {
   }
 
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center relative z-10">
+    <section id="about" className="py-80 flex items-center justify-center relative z-20"
+>
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         
         {/* Left: Your Photo */}
