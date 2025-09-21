@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "flucas.io",
   description: "Created with v0",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.svg",
+  },
 }
 
 export default function RootLayout({
