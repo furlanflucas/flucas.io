@@ -18,7 +18,8 @@ export function ParticleBackground() {
   const mouseRef = useRef({ x: 0, y: 0 })
   const animationRef = useRef<number>()
 
-  const colors = ["#ffffffff"]
+  const colors = ["#338aca", "#76e0f0ff", "#8df1e2ff", "#91d0edff", "#363358", "#ffffff"]
+
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -34,7 +35,7 @@ export function ParticleBackground() {
 
     const createParticles = () => {
       const particles: Particle[] = []
-      const particleCount = Math.min(200, Math.floor((canvas.width * canvas.height) / 15000))
+      const particleCount = Math.min(400, Math.floor((canvas.width * canvas.height) / 15000))
 
       for (let i = 0; i < particleCount; i++) {
         particles.push({
@@ -60,7 +61,7 @@ export function ParticleBackground() {
 
       // Add glow effect
       ctx.shadowColor = particle.color
-      ctx.shadowBlur = 10
+      ctx.shadowBlur = 30
       ctx.fill()
       ctx.restore()
     }
@@ -84,8 +85,8 @@ export function ParticleBackground() {
       particle.y += particle.vy
 
       // Friction
-      particle.vx *= 0.99
-      particle.vy *= 0.99
+      particle.vx *= 0.9999
+      particle.vy *= 0.9999
 
       // Boundary collision
       if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1

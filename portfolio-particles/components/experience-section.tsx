@@ -4,10 +4,10 @@ export function ExperienceSection() {
   const skills = ["AWS", "Azure", "CompTIA"]
 
   const companies = [
+    { name: "Vercel", logo: "/vercel-svgrepo-com.svg" },
     { name: "Airbnb", logo: "/airbnb-2-logo-svgrepo-com.svg" },
     { name: "Meta", logo: "/facebook-logo-meta-2-svgrepo-com.svg" },
-    { name: "Vercel", logo: "/vercel-svgrepo-com.svg" },
-  ]
+]
 
   return (
     <section id="experience" className="py-24 relative z-10">

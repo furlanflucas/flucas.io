@@ -13,19 +13,17 @@ const orbitron = Orbitron({
 })
 
 export const metadata: Metadata = {
-  title: "flucas.io",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "Fluxcloud",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.png",
   },
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
     <html lang="en">
       <body
@@ -37,3 +35,4 @@ export default function RootLayout({
     </html>
   )
 }
+

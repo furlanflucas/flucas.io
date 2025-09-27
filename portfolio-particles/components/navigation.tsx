@@ -39,8 +39,8 @@ export function Navigation() {
 
   const navItems = [
     { id: "about", label: "ABOUT" },
-    { id: "experience", label: "EXPERIENCE" },
     { id: "projects", label: "PROJECTS" },
+    { id: "experience", label: "EXPERIENCE" },
     { id: "contact", label: "CONTACT" },
   ]
 
@@ -48,20 +48,23 @@ export function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
       <div className="w-full px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo Section */}
           <div
             onClick={() => scrollToSection("about")}
-            className="flex items-left gap-2 text-2xl md:text-4xl font-[var(--font-orbitron)] cursor-pointer select-none"
+            className="flex items-center gap-3 cursor-pointer select-none"
           >
+            {/* Main Icon */}
             <img
-              src="/navbar.svg"
+              src="/navbar.png"
               alt="Logo"
-              className="h-6 w-6 text-primary"
+              className="h-12 w-12"
             />
-            <span>
-              <span className="text-foreground">flucas</span>
-              <span className="text-primary">.io</span>
-            </span>
+            {/* Brand Image Instead of Text */}
+            <img
+              src="/brand.png"
+              alt="Brand"
+              className="h-14 w-auto"
+            />
           </div>
 
           {/* Navigation Items */}
@@ -70,7 +73,7 @@ export function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-sm font-medium transition-colors hover:text-accent ${
                   activeSection === item.id
                     ? "text-primary"
                     : "text-muted-foreground"

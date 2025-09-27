@@ -28,8 +28,8 @@ export function HeroSection() {
         {/* Right: Text + Links */}
         <div className="space-y-8 text-left">
           <div className="space-y-6">
-            <h1 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight font-[var(--font-orbitron)]">
-              Welcome!
+            <h1 className="text-5xl md:text-7xl font-Semi-Bold (600) text-foreground tracking-tight font-[var(--font-orbitron)]">
+              WELCOME!
             </h1>
             <h2 className="text-2xl md:text-3xl text-primary font-low font-[var(--font-orbitron)]">
               I'm Lucas, a Cloud Engineer.

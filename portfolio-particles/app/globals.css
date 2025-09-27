@@ -3,151 +3,96 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* === Base Colors (Light Mode) === */
 :root {
-  /* Updated color palette to match user's specifications */
-  --background: #000000; /* very dark navy */
-  --foreground: #ffffff;
-  --card: #161616; /* deep indigo */
-  --card-foreground: #ffffff;
-  --popover: #dbdbdc;
-  --popover-foreground: #363535;
-  --primary: #f8f8f8; /* medium blue */
-  --primary-foreground: #000000;
-  --secondary: #7d7e7e; /* cyan/teal-blue */
-  --secondary-foreground: #191834;
-  --muted: #838383;
-  --muted-foreground: #a0a0a0;
-  --accent: #ffffff; /* seafoam green */
-  --accent-foreground: #ffffff;
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: #8a8a8a;
-  --input: #2b2c68;
-  --ring: #338aca;
-  --chart-1: #338aca;
-  --chart-2: #26b7cd;
-  --chart-3: #61bdaf;
-  --chart-4: #2b2c68;
-  --chart-5: #191834;
-  --radius: 0.625rem;
-  --sidebar: #757578;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #338aca;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #2b2c68;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #2b2c68;
-  --sidebar-ring: #338aca;
+  --background: #000000;       /* Main background (navbar, page background) */
+  --foreground: #ffffff;       /* Main text color */
+
+  --card: #3e41429e;  
+  --cardaccent:#7c7d7e9e;  
+          /* Background for cards/boxes */
+  --card-foreground: #ffffff;/* Text inside cards (subtle) */
+
+  --primary: #ffffff;          /* Highlights, active nav link, h2 subheadings */
+  --primary-foreground: #ffffffcf;
+  --accent: #92e2f4;
+
+  --muted-foreground: #fafafaab; /* Secondary text (paragraphs, less important text) */
+
+  --border: #3e41429e;           /* Borders for cards/sections */
+
+  --radius: 0.625rem;          /* Base border radius for rounded corners */
+
 }
 
+/* === Dark Mode Overrides === */
 .dark {
-  --background: #191834;
-  --foreground: #ffffff;
-  --card: #2b2c68;
+  --background: #191834;       /* Darker background */
+  --foreground: #ffffff;       /* Keep text white */
+
+  --card: #2b2c68;             /* Dark card background */
   --card-foreground: #ffffff;
-  --popover: #2b2c68;
-  --popover-foreground: #ffffff;
-  --primary: #338aca;
-  --primary-foreground: #ffffff;
-  --secondary: #26b7cd;
-  --secondary-foreground: #191834;
-  --muted: #2b2c68;
-  --muted-foreground: #a0a0a0;
-  --accent: #61bdaf;
-  --accent-foreground: #191834;
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: #2b2c68;
-  --input: #2b2c68;
-  --ring: #338aca;
-  --chart-1: #338aca;
-  --chart-2: #26b7cd;
-  --chart-3: #61bdaf;
-  --chart-4: #2b2c68;
-  --chart-5: #191834;
-  --sidebar: #191834;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #338aca;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #2b2c68;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #2b2c68;
-  --sidebar-ring: #338aca;
+
+  --primary: #338aca;          /* Bright blue highlight for links/buttons */
+  --muted-foreground: #a0a0a0; /* Secondary text stays gray */
+  --border: #2b2c68;           /* Borders blend with dark theme */
 }
 
+/* === Theme Mapping (Tailwind will use these) === */
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Core Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
+  --color-accent: var(--accent);
+  --color-cardaccent: var(--cardaccent);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
+
   --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
+
   --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
+
+  /* Radius utilities */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* === Base Layer (applies styles globally) === */
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border; /* All borders use --border */
   }
   body {
-    @apply bg-background text-foreground overflow-x-hidden;
+    @apply bg-background text-foreground overflow-x-hidden; /* Page background + text */
   }
 }
 
-/* Added particle animation styles */
+/* === Particle Animations === */
 .particle {
   position: absolute;
   border-radius: 50%;
   pointer-events: none;
   opacity: 0.6;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .particle-glow {
-  box-shadow: 0 0 20px currentColor;
+  box-shadow: 0 0 20px currentColor; /* Glow effect around particles */
 }
 
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(180deg);
-  }
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
 }
 
 .floating {
-  animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite; /* Smooth float loop */
 }

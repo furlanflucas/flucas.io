@@ -5,7 +5,7 @@ import { Mail, MessageCircle } from "lucide-react"
 export function ContactSection() {
   return (
     <section id="contact" className="py-24 relative z-10">
-      <div className="max-w-4xl mx-auto px-6 text-center">
+      <div className="max-w-2xl mx-auto px-6 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-balance">
           Let's Work Together
         </h2>
@@ -32,7 +32,7 @@ export function ContactSection() {
 
             {/* Updated: Mailto link wrapping the button */}
             <a href="mailto:furlanflucas@gmail.com">
-              <Button className="w-full bg-primary hover:bg-primary/90">
+              <Button className="w-full bg-muted-foreground text-foreground hover:text-card">
                 <MessageCircle className="h-4 w-4 mr-2" />
                 Send Message
               </Button>
@@ -42,7 +42,7 @@ export function ContactSection() {
 
         <div className="mt-16 pt-5 border-t border-border/50">
           <p className="text-sm text-muted-foreground">
-            © 2025 — flucas.io
+            FLUXCLOUD © 2025
           </p>
         </div>
       </div>
