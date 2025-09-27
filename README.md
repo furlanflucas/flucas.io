@@ -1,6 +1,6 @@
 # Portfolio Particles
 
-This project is part of my personal portfolio website **[flucas.io](https://flucasio.com)**.  
+This project is part of my personal portfolio website **[Fluxcloud](https://flucasio.com](https://fluxcloudsolutions.com/))**.  
 It adds an interactive particle animation background to showcase my work in a visually engaging way.
 
 ---
@@ -28,4 +28,4 @@ The goal of this project is to demonstrate my ability to:
 ## Demo
 
 You can view it live on my portfolio site:  
-👉 **[flucas.io](https://flucasio.com)**
+👉 **[Fluxcloud](https://flucasio.com](https://fluxcloudsolutions.com/))**
