@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
+import { ArrowDown, Github, Linkedin } from "lucide-react"
 
 export function HeroSection() {
   const scrollToProjects = () => {
@@ -12,14 +12,13 @@ export function HeroSection() {
   }
 
   return (
-    <section id="about" className="py-80 flex items-center justify-center relative z-20"
->
+    <section id="about" className="py-80 flex items-center justify-center relative z-20">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         
         {/* Left: Your Photo */}
         <div className="flex justify-center">
           <img
-            src="/IMG_8763.JPG" // <-- make sure this is in the /public folder
+            src="/IMG_8763.JPG"
             alt="Lucas Furlan"
             className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-lg border-4 border-primary/20"
           />
@@ -37,8 +36,7 @@ export function HeroSection() {
           </div>
 
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-            I Design and optimize scalable, cloud-native solutions. Passionate about building resilient
-            infrastructure that drives innovation at scale.
+            I design and architect scalable, cloud-native solutions that enable business agility. Focused on building resilient infrastructures that align with strategic goals and deliver long-term value.
           </p>
 
           {/* Social Links */}
@@ -60,16 +58,6 @@ export function HeroSection() {
                 className="rounded-full border-primary/20 hover:border-primary hover:bg-primary/10 bg-transparent"
               >
                 <Linkedin className="h-5 w-5" />
-              </Button>
-            </a>
-
-            <a href="mailto:furlanflucas@gmail.com">
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full border-primary/20 hover:border-primary hover:bg-primary/10 bg-transparent"
-              >
-                <Mail className="h-5 w-5" />
               </Button>
             </a>
           </div>
